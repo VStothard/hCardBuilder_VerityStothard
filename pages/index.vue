@@ -97,7 +97,7 @@
                     type="file" 
                     id="fileUpload" 
                     name="fileUpload" 
-                    @change="previewImage($event)" 
+                    @change="showPreview($event)" 
                     accept="image/*"
                     class="hidden"
                   />
@@ -147,63 +147,21 @@ export default {
   },
   methods: {
     handleSubmit() {
-      console.log('done!', this.getUserDetails);
+      alert(`Thanks ${this.getUserDetails.givenName} ${this.getUserDetails.surname}! Your card has been created.`)
     },
     triggerUpload() {
       this.$refs.fileUpload.click();
     },
-    previewImage(event) {
-          // Reference to the DOM input element
-          var input = event.target;
-          // Ensure that you have a file before attempting to read it
-          if (input.files && input.files[0]) {
-              // create a new FileReader to read this image and convert to base64 format
-              var reader = new FileReader();
-              // Define a callback function to run, when FileReader finishes its job
-              reader.onload = (e) => {
-                  // Note: arrow function used here, so that "this.imageData" refers to the imageData of Vue component
-                  // Read image as base64 and set to imageData
-                  this.imageData = e.target.result;
-              }
-              // Start the reader job - read file as a data url (base64 format)
-              reader.readAsDataURL(input.files[0]);
+    showPreview(event) {
+        var input = event.target;
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = (e) => {
+              this.imageData = e.target.result;
           }
-      },
-    fileUpload(fileData) {
-      if (fileData.target.files[0]){
-        let result = fileData.target.result;
-        debugger
-
-        var reader = new FileReader();
-
-        reader.onload = function(e) {
-          debugger
+          reader.readAsDataURL(input.files[0]);
         }
-
-        debugger
-
-        // reader.onload = function (e) {
-        //     $('#blah')
-        //         .attr('src', e.target.result);
-        // };
-
-        // reader.readAsDataURL(input.files[0]);
-      } else {
-        debugger
-      }
-
-            // if (input.files && input.files[0]) {
-            //     var reader = new FileReader();
-
-            //     reader.onload = function (e) {
-            //         $('#blah')
-            //             .attr('src', e.target.result);
-            //     };
-
-            //     reader.readAsDataURL(input.files[0]);
-            // }
-        
-    }
+    },
   }
 }
 </script>
