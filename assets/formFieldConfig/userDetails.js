@@ -3,60 +3,60 @@ export default {
     fieldName: 'givenName', 
     type: 'text', 
     label: 'your name', 
-    placeholder: ''
+    placeholder: 'Sam'
   },
   surname: { 
     fieldName: 'surname', 
     type: 'text', 
     label: 'Surname', 
-    placeholder: ''
+    placeholder: 'Orlando'
   },
   email: { 
     fieldName: 'email', 
     type: 'text', 
     label: 'your name', 
-    placeholder: ''
+    placeholder: 'sam.orlando@example.con'
   },
   phone: { 
     fieldName: 'phone', 
     type: 'text', 
     label: 'your name', 
-    placeholder: ''
+    placeholder: '04 0000 0000'
   },
   houseNumber: { 
     fieldName: 'houseNumber', 
     type: 'text', 
     label: '# number', 
-    placeholder: ''
+    placeholder: '12'
   },
   street: { 
     fieldName: 'street', 
     type: 'text', 
     label: 'street', 
-    placeholder: ''
+    placeholder: 'Tirel Road'
   },
   suburb: { 
     fieldName: 'suburb', 
     type: 'text', 
     label: 'suburb', 
-    placeholder: ''
+    placeholder: 'Georges Garden'
   },
   state: { 
     fieldName: 'state', 
     type: 'text', 
     label: 'state', 
-    placeholder: ''
+    placeholder: 'NSW'
   },
   postCode: { 
     fieldName: 'postCode', 
     type: 'text', 
     label: 'postcode', 
-    placeholder: ''
+    placeholder: '2901'
   },
   country: { 
     fieldName: 'country', 
     type: 'text', 
     label: 'country', 
-    placeholder: ''
+    placeholder: 'Australia'
   }
 }
