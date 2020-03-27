@@ -1,7 +1,7 @@
 <template>
   <div class="w-full max-w-md my-12 md:my-0">
-    <p class="text-right mb-1 uppercase text-gray-500 font-bold">hCard Preview</p>
-    <div class="w-full bg-white">
+    <p class="text-right text-sm mb-1 uppercase text-gray-500 font-semibold">hCard Preview</p>
+    <div class="w-full bg-white shadow">
       <div class="h-24 bg-gray-700 text-white flex justify-between p-4 items-end">
         <p class="text-2xl font-serif font-bold">{{getUserDetails.givenName }} {{getUserDetails.surname }}</p>
         <img v-if="imageData.length" class="display-img" :src="imageData">
@@ -10,11 +10,11 @@
       <div class="p-4">
         <div class="card-field">
           <p class="card-label  w-1/4">Email</p>
-          <p class="w-3/4 font-serif">{{getUserDetails.email || ''}}</p>
+          <p class="w-3/4 font-serif">{{ getUserDetails.email }}</p>
         </div>
         <div class="card-field">
           <p class="card-label  w-1/4">Phone</p>
-          <p class="w-3/4 font-serif">{{getUserDetails.phone || ''}}</p>
+          <p class="w-3/4 font-serif">{{ getUserDetails.phone }}</p>
         </div>
         <div class="card-field">
           <p class="card-label  w-1/4">Address</p>
@@ -22,7 +22,7 @@
         </div>
         <div class="card-field">
           <p class="card-label  w-1/4"></p>
-          <p class="w-3/4 font-serif">{{addressLineTwo }}</p>
+          <p class="w-3/4 font-serif">{{ addressLineTwo }}</p>
         </div>
         <div class="flex">
           <div class="w-1/2 card-field">
@@ -47,7 +47,7 @@ export default {
   props: {
     imageData: {
       type: String,
-      default: '~/assets/img/defaultImg.png'
+      default: ''
     }
   },
   computed: {
@@ -81,4 +81,5 @@ export default {
 .card-label {
   @apply text-xs font-semibold text-gray-600;
 }
+
 </style>

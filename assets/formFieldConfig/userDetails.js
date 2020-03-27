@@ -2,7 +2,7 @@ export default {
   givenName: { 
     fieldName: 'givenName', 
     type: 'text', 
-    label: 'your name', 
+    label: 'Given name', 
     placeholder: ''
   },
   surname: { 
@@ -14,49 +14,49 @@ export default {
   email: { 
     fieldName: 'email', 
     type: 'text', 
-    label: 'your name', 
+    label: 'Email', 
     placeholder: ''
   },
   phone: { 
     fieldName: 'phone', 
     type: 'text', 
-    label: 'your name', 
+    label: 'Phone', 
     placeholder: ''
   },
   houseNumber: { 
     fieldName: 'houseNumber', 
     type: 'text', 
-    label: '# number', 
+    label: 'House name or #', 
     placeholder: ''
   },
   street: { 
     fieldName: 'street', 
     type: 'text', 
-    label: 'street', 
+    label: 'Street', 
     placeholder: ''
   },
   suburb: { 
     fieldName: 'suburb', 
     type: 'text', 
-    label: 'suburb', 
+    label: 'Suburb', 
     placeholder: ''
   },
   state: { 
     fieldName: 'state', 
     type: 'text', 
-    label: 'state', 
+    label: 'State', 
     placeholder: ''
   },
   postCode: { 
     fieldName: 'postCode', 
     type: 'text', 
-    label: 'postcode', 
+    label: 'Postcode', 
     placeholder: ''
   },
   country: { 
     fieldName: 'country', 
     type: 'text', 
-    label: 'country', 
+    label: 'Country', 
     placeholder: ''
   }
 }

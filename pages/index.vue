@@ -2,9 +2,9 @@
   <div class="">
     <div class="md:min-h-screen block md:flex justify-between bg-gray-300">
       <div class="w-full md:max-w-lg shadow bg-white flex justify-around items-center">
-        <div class="m-8">
+        <div class="py-8 px-2 md:p-8">
           <h1 class="text-3xl text-blue-900 font-bold">hCard Builder</h1>
-          <form @submit.prevent="handleSubmit" >
+          <form @submit.prevent="handleSubmit" enctype="multipart/form-data" >
             <fieldset class="my-6">
               <legend class="text-xs text-gray-500 font-semibold uppercase border-b mb-4 w-full">
                 Personal Details
@@ -116,7 +116,7 @@
           </form>
         </div>
       </div>
-      <div class="w-full md:flex-grow flex justify-around items-center">
+      <div class="w-full md:flex-grow flex justify-around items-center p-2">
         <h-card :image-data="imageData" />
       </div>
     </div>
