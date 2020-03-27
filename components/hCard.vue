@@ -3,9 +3,9 @@
     <p class="text-right mb-1 uppercase text-gray-500 font-bold">hCard Preview</p>
     <div class="w-full bg-white">
       <div class="h-24 bg-gray-700 text-white flex justify-between p-4 items-end">
-        <p class="text-2xl font-serif font-bold">{{getUserDetails.givenName || 'Lex'}} {{getUserDetails.surname || 'Jones'}}</p>
+        <p class="text-2xl font-serif font-bold">{{getUserDetails.givenName }} {{getUserDetails.surname }}</p>
         <img v-if="imageData.length" class="display-img" :src="imageData">
-        <div v-else class="display-img" />
+        <img v-else class="display-img" src="~/assets/img/defaultImg.png">
       </div>
       <div class="p-4">
         <div class="card-field">
@@ -47,7 +47,7 @@ export default {
   props: {
     imageData: {
       type: String,
-      default: ''
+      default: '~/assets/img/defaultImg.png'
     }
   },
   computed: {

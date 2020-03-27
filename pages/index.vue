@@ -87,6 +87,7 @@
               <div class="row pt-6">
                 <div class="col">
                   <button 
+                    type="button"
                     @click="triggerUpload"
                     class="btn-base bg-gray-600 border-gray-800"
                   >
