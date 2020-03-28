@@ -4,8 +4,8 @@
     <div class="w-full bg-white shadow">
       <div class="h-24 bg-gray-700 text-white flex justify-between p-4 items-end">
         <p class="text-2xl font-serif font-bold">{{getUserDetails.givenName }} {{getUserDetails.surname }}</p>
-        <img v-if="imageData.length" class="display-img" :src="imageData">
-        <img v-else class="display-img" src="~/assets/img/defaultImg.png">
+        <img v-if="imageData.length" class="display-img" :src="imageData" :alt="`${getUserDetails.givenName } ${getUserDetails.surname } profile photo`">
+        <img v-else class="display-img" src="~/assets/img/defaultImg.png" alt="`default profile photo`">
       </div>
       <div class="p-4">
         <div class="card-field">
